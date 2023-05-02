@@ -1,0 +1,34 @@
+p {
+  font-family: Lato;
+}
+
+.description{
+  background-color: antiquewhite;
+  display: flex;
+
+}
+.text-selected-value{
+  padding: 0.25rem ;
+}
+.selected-list{
+  display: inline-block;
+  padding: 0.25rem ;
+ 
+}
+.no-selection{
+  display: inline-block;
+  padding: 0.25rem;
+  color: grey;
+}
+
+button{
+  width: 100%;
+  padding: 0.25rem;
+  color: green;
+  background-color: white;
+  border: solid 1px green;
+}
+
+button:hover{
+  background-color: rgb(147, 218, 147);
+}

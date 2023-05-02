@@ -1,0 +1,27 @@
+<div class="description">
+  <p class="text-selected-value">Selected Value: </p>
+  <div *ngIf="selectedItems.length > 0; else noSelection">
+    <div *ngFor="let item of selectedItems" class="selected-list">
+      <p>{{item.title}}</p>
+    </div>
+  </div>
+  <ng-template #noSelection >
+    <p class="no-selection">No item selected</p>
+  </ng-template>
+</div>
+<form>
+  <div class="selectAll">
+    <ul *ngFor="let item of list">
+      <input
+        type="checkbox"
+        id="{{ item.id }}"
+        name="checked"
+        [(ngModel)]="item.checked"
+        (change)="onChecked(item.id, item.checked)"
+      />
+      <label for="{{ item.id }}">{{ item.title }}</label>
+    </ul>
+  </div>
+  <hr />
+  <button (click)="clearAll()">Clear All</button>
+</form>
